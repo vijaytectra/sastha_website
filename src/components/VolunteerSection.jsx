@@ -31,9 +31,9 @@ export default function VolunteerSection() {
             <div className="vol-card-content" data-node-id="1:532">
               <div className="vol-card-header" data-node-id="1:533">
                 <div className="vol-card-icon-box" data-node-id="1:534">
-                  <svg className="vol-card-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <circle cx="9" cy="7" r="4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <svg className="vol-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
                   </svg>
                 </div>
                 <h3 className="vol-card-heading" data-node-id="1:541">Volunteer With Us</h3>
@@ -82,8 +82,8 @@ export default function VolunteerSection() {
             <div className="vol-card-content" data-node-id="1:570">
               <div className="vol-card-header" data-node-id="1:571">
                 <div className="vol-card-icon-box" data-node-id="1:572">
-                  <svg className="vol-card-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" strokeWidth="2"/>
+                  <svg className="vol-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
                   </svg>
                 </div>
                 <h3 className="vol-card-heading" data-node-id="1:575">Support Our Programs</h3>
@@ -96,8 +96,13 @@ export default function VolunteerSection() {
                 {/* Impact Info Glass box */}
                 <div className="vol-impact-box" data-node-id="1:580">
                   <div className="vol-impact-header">
-                    <svg className="vol-impact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <svg className="vol-impact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11 15.5c-2.3-2.3-2.3-6.1 0-8.5 2.3-2.3 6.1-2.3 8.5 0 2.3 2.3 2.3 6.1 0 8.5" />
+                      <path d="M5.4 12.6c-2.5-2.5-2.5-6.6 0-9.1 2.5-2.5 6.6-2.5 9.1 0" />
+                      <path d="m14.5 14.5 3 3c.5.5.5 1.4 0 2l-2 2" />
+                      <path d="M16 11.5c1.6 0 3 1.3 3 3" />
+                      <path d="M11 12.5c0-1.6 1.3-3 3-3" />
+                      <path d="M12 21.5 8.9 18.4c-.6-.6-.6-1.5 0-2.1L12 13" />
                     </svg>
                     <span className="vol-impact-title">Your Impact</span>
                   </div>

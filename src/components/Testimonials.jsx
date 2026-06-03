@@ -24,8 +24,9 @@ export default function Testimonials() {
           <div className="test-card" data-node-id="test-card-0">
             {/* Quote overlapping icon */}
             <div className="test-quote-icon-box" data-node-id="quote-icon-0">
-              <svg className="test-quote-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.017 21v-7.391c0-5.704 3.748-9.762 9-10.361v3.254c-3.193.201-4.702 1.954-5.002 5.25H23v9.248h-8.983zm-12 0v-7.391c0-5.704 3.748-9.762 9-10.361v3.254c-3.193.201-4.702 1.954-5.002 5.25H11v9.248H2.017z"/>
+              <svg className="test-quote-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1Z"/>
+                <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1Z"/>
               </svg>
             </div>
 
@@ -52,8 +53,9 @@ export default function Testimonials() {
           <div className="test-card" data-node-id="test-card-1">
             {/* Quote overlapping icon */}
             <div className="test-quote-icon-box" data-node-id="quote-icon-1">
-              <svg className="test-quote-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.017 21v-7.391c0-5.704 3.748-9.762 9-10.361v3.254c-3.193.201-4.702 1.954-5.002 5.25H23v9.248h-8.983zm-12 0v-7.391c0-5.704 3.748-9.762 9-10.361v3.254c-3.193.201-4.702 1.954-5.002 5.25H11v9.248H2.017z"/>
+              <svg className="test-quote-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1Z"/>
+                <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1Z"/>
               </svg>
             </div>
 
@@ -80,8 +82,9 @@ export default function Testimonials() {
           <div className="test-card" data-node-id="test-card-2">
             {/* Quote overlapping icon */}
             <div className="test-quote-icon-box" data-node-id="quote-icon-2">
-              <svg className="test-quote-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.017 21v-7.391c0-5.704 3.748-9.762 9-10.361v3.254c-3.193.201-4.702 1.954-5.002 5.25H23v9.248h-8.983zm-12 0v-7.391c0-5.704 3.748-9.762 9-10.361v3.254c-3.193.201-4.702 1.954-5.002 5.25H11v9.248H2.017z"/>
+              <svg className="test-quote-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1Z"/>
+                <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1Z"/>
               </svg>
             </div>
 

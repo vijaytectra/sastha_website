@@ -2,7 +2,7 @@
 
 .donate-section {
   width: 100%;
-  background: linear-gradient(152.8deg, #2d5240 0%, #2f5442 12.5%, #315644 25%, #335946 37.5%, #355b48 50%, #375d4a 62.5%, #395f4c 75%, #3b624e 87.5%, #3d6450 100%);
+  background-color: #2d5240;
   padding: 128px 247.6px 100px 247.6px;
   box-sizing: border-box;
   display: flex;
@@ -97,11 +97,13 @@
 }
 
 .donate-tier-amount {
+  color: #FFF;
+  text-align: center;
   font-family: 'Manrope', sans-serif;
-  font-weight: 500;
   font-size: 48px;
-  line-height: 48px;
-  color: #ffffff;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
   margin-bottom: 12px;
   letter-spacing: -1px;
 }

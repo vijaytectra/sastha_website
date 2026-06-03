@@ -4,7 +4,7 @@
 .hero-section {
   position: relative;
   width: 100%;
-  background-color: #faf8f5; /* Primary sand/light beige background */
+  background-color: white; /* Primary sand/light beige background */
   padding: 100px 32px;
   box-sizing: border-box;
   overflow: hidden;
@@ -220,8 +220,8 @@
 
 /* Right Image Layout */
 .hero-image-wrapper {
-  width: 568px;
-  height: 710px;
+  width: 600px;
+  height: 726px;
   border-radius: 32px;
   overflow: hidden;
   position: relative;
