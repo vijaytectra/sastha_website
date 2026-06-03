@@ -128,7 +128,7 @@ export default function Gallery() {
           {/* Gallery Item 10 */}
           <div className="gallery-item item-10" data-node-id="gallery-item-10">
             <img 
-              src="assets/17.jpg" 
+              src="assets/25.png" 
               alt="Community action moment 10" 
               className="gallery-img" 
             />
