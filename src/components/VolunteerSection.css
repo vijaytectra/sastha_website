@@ -1,0 +1,365 @@
+/* Volunteer & Support Section CSS */
+
+.vol-section {
+  width: 100%;
+  background-color: #f5f1ea;
+  padding: 100px 62.4px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vol-container {
+  width: 100%;
+  max-width: 1280px;
+  box-sizing: border-box;
+  padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px; /* Spacing between header and cards */
+}
+
+/* Header Text styling */
+.vol-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.vol-badge {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #3a5a47;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.vol-heading {
+  margin: 0 0 24px 0;
+}
+
+.vol-heading span {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 75.6px;
+  color: #1f2d25;
+  letter-spacing: -1.8px;
+}
+
+.vol-subtitle {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 32.5px;
+  color: #5a6b62;
+  max-width: 768px;
+}
+
+/* Two Cards Grid Layout */
+.vol-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 620px);
+  gap: 32px;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Base Card structure */
+.vol-card {
+  position: relative;
+  width: 100%;
+  height: 724px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 8px 10px -6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* Background image wrapper and overlays */
+.vol-card-bg-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.vol-card-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.vol-card-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.overlay-green {
+  background: linear-gradient(130.6deg, rgba(58, 90, 71, 0.92) 0%, rgba(58, 90, 71, 0.85) 50%, rgba(31, 48, 40, 0.92) 100%);
+}
+
+.overlay-rust {
+  background: linear-gradient(130.6deg, rgba(184, 86, 63, 0.92) 0%, rgba(184, 86, 63, 0.88) 50%, rgba(160, 77, 56, 0.92) 100%);
+}
+
+/* Content Layout inside card */
+.vol-card-content {
+  position: relative;
+  z-index: 3;
+  padding: 48px;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.vol-card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.vol-card-icon-box {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 0.8px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  margin-bottom: 32px;
+}
+
+.vol-card-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.vol-card-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 52.8px;
+  color: #ffffff;
+  letter-spacing: -1.2px;
+  margin: 0 0 20px 0;
+}
+
+.vol-card-desc {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 29.25px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.vol-card-body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+}
+
+/* Volunteer list checklist */
+.vol-card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.vol-card-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.vol-card-bullet {
+  width: 8px;
+  height: 8px;
+  background-color: #98b89d;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Glass box impact tier inside Card 2 */
+.vol-impact-box {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 0.8px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 32px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+}
+
+.vol-impact-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.vol-impact-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.vol-impact-title {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.vol-impact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.vol-impact-list li {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* CTA buttons inside cards */
+.vol-card-btn {
+  text-decoration: none;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  height: 56px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-white-green {
+  background-color: #ffffff;
+  color: #3a5a47 !important;
+  width: 264px;
+}
+
+.btn-white-green:hover {
+  background-color: #f7fbf8;
+  transform: translateY(-1px);
+}
+
+.btn-white-rust {
+  background-color: #ffffff;
+  color: #b8563f !important;
+  width: 249px;
+}
+
+.btn-white-rust:hover {
+  background-color: #fffaf9;
+  transform: translateY(-1px);
+}
+
+.vol-btn-arrow {
+  width: 16px;
+  height: 16px;
+}
+
+/* Responsiveness Media Queries */
+@media (max-width: 1320px) {
+  .vol-section {
+    padding: 100px 40px;
+  }
+  
+  .vol-cards-grid {
+    grid-template-columns: 1fr;
+    max-width: 620px;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .vol-section {
+    padding: 60px 16px;
+  }
+  
+  .vol-container {
+    padding: 0;
+    gap: 48px;
+  }
+
+  .vol-heading span {
+    font-size: 48px;
+    line-height: 52px;
+  }
+
+  .vol-subtitle {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  
+  .vol-card {
+    height: auto;
+  }
+
+  .vol-card-content {
+    padding: 32px 24px;
+  }
+
+  .vol-card-heading {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  
+  .vol-card-list {
+    margin-bottom: 32px;
+  }
+
+  .vol-impact-box {
+    padding: 24px 16px;
+    margin-bottom: 32px;
+  }
+
+  .btn-white-green, .btn-white-rust {
+    width: 100%;
+  }
+}

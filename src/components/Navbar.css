@@ -1,0 +1,200 @@
+/* Navbar Design Stylesheet */
+
+/* Root Header Properties */
+.navbar-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-bottom: 0.8px solid rgba(45, 82, 64, 0.15);
+  box-sizing: border-box;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Centering horizontal offsets */
+  padding: 0 119.6px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Navbar Flex Layout */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1280px;
+  height: 100%;
+  padding: 0 32px;
+  box-sizing: border-box;
+}
+
+/* Brand / Logo Properties */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.navbar-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 28px;
+  color: #2d5240;
+  text-decoration: none;
+  white-space: nowrap;
+  letter-spacing: -0.5px;
+}
+
+/* Navigation Links Layout */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 32px; /* Exact navigation gap from Figma */
+  height: 100%;
+}
+
+.navbar-link {
+  font-family: 'General Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1a1a1a;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.navbar-link:hover {
+  color: #2d5240;
+}
+
+/* Donate Button Style */
+.navbar-button {
+  font-family: 'General Sans', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff !important;
+  background-color: #a85f44;
+  width: 101.65px; /* Exact button width from Figma */
+  height: 44px; /* Exact button height from Figma */
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  white-space: nowrap;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.navbar-button:hover {
+  background-color: #925039;
+  transform: translateY(-1px);
+}
+
+.navbar-button:active {
+  transform: translateY(0);
+}
+
+/* Mobile Toggle Hamburger styling */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1010;
+}
+
+.navbar-toggle:focus {
+  outline: none;
+}
+
+.toggle-line {
+  width: 100%;
+  height: 2px;
+  background-color: #2d5240;
+  transition: all 0.3s ease;
+  transform-origin: left center;
+}
+
+/* Toggle menu animation states */
+.toggle-line.open:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.toggle-line.open:nth-child(2) {
+  opacity: 0;
+}
+
+.toggle-line.open:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+/* Responsiveness Media Query */
+@media (max-width: 992px) {
+  .navbar-header {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-header {
+    padding: 0 16px;
+  }
+  
+  .navbar-container {
+    padding: 0 16px;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background-color: #ffffff;
+    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+    padding-top: 100px;
+    z-index: 1005;
+  }
+
+  .navbar-nav.mobile-open {
+    right: 0;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 32px;
+    gap: 24px;
+  }
+
+  .navbar-link {
+    font-size: 18px;
+    width: 100%;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .navbar-button {
+    width: 100%;
+    margin-top: 16px;
+    height: 48px;
+  }
+}

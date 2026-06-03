@@ -1,0 +1,179 @@
+/* Impact Statistics Section CSS */
+
+/* Base Section styling */
+.stats-section {
+  width: 100%;
+  background-color: #f5f1ea;
+  padding: 100px 62.4px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Inner Container */
+.stats-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1280px;
+  gap: 80px; /* Spacing between header block and grid */
+  box-sizing: border-box;
+  padding: 0 32px;
+}
+
+/* Header block alignment and styling */
+.stats-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.stats-badge {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #3a5a47;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.stats-heading {
+  margin: 0 0 24px 0;
+}
+
+.stats-heading span {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 75.6px;
+  color: #1f2d25;
+  letter-spacing: -1.8px;
+}
+
+.stats-subtitle {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 300; /* Light */
+  font-size: 20px;
+  line-height: 32.5px;
+  color: #5a6b62;
+  max-width: 768px;
+}
+
+/* Stats Cards Grid Layout */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 294px);
+  gap: 32px;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Individual Stat Card properties */
+.stat-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.05), 0px 2px 4px -1px rgba(0, 0, 0, 0.03);
+  padding: 40px;
+  height: 329.5px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.08), 0px 4px 6px -2px rgba(0, 0, 0, 0.04);
+}
+
+/* Number text styled exactly per card */
+.stat-number {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 72px;
+  letter-spacing: -1.8px;
+  margin-bottom: 92px; /* Large space in figma */
+}
+
+.stat-color-green {
+  color: #3a5a47;
+}
+
+.stat-color-rust {
+  color: #b8563f;
+}
+
+.stat-card-title {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  color: #1f2d25;
+  margin: 0 0 12px 0;
+}
+
+.stat-card-desc {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 300; /* Light */
+  font-size: 14px;
+  line-height: 22.75px;
+  color: #5a6b62;
+}
+
+/* Responsiveness adjustments */
+@media (max-width: 1320px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 294px);
+    justify-content: center;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-section {
+    padding: 60px 16px;
+  }
+  
+  .stats-container {
+    padding: 0;
+    gap: 48px;
+  }
+
+  .stats-heading span {
+    font-size: 48px;
+    line-height: 52px;
+  }
+
+  .stats-subtitle {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    gap: 24px;
+  }
+  
+  .stat-card {
+    width: 100%;
+    height: auto;
+    padding: 32px 24px;
+  }
+
+  .stat-number {
+    margin-bottom: 24px;
+  }
+}

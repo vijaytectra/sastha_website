@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-beige: #F9F6F0;
+  --color-brand-beige-dark: #EAE4D9;
+  --color-brand-green: #2F5A44;
+  --color-brand-green-dark: #1D3B2B;
+  --color-brand-rust: #C05E43;
+  --color-brand-rust-dark: #A34A31;
+  --color-brand-charcoal: #1E2522;
+  --color-brand-sand: #FAF8F5;
+
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-beige text-brand-charcoal font-sans antialiased selection:bg-brand-rust/20 selection:text-brand-rust;
+    margin: 0;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-brand-beige;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-brand-beige-dark border-4 border-solid border-brand-beige rounded-full hover:bg-brand-rust/55 transition-colors;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(253, 251, 247, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(234, 228, 217, 0.5);
+}

@@ -1,0 +1,262 @@
+/* Events Section CSS */
+
+.events-section {
+  width: 100%;
+  background-color: #f5f1ea;
+  padding: 100px 62.4px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.events-container {
+  width: 100%;
+  max-width: 1280px;
+  box-sizing: border-box;
+  padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px; /* Space between header and list */
+}
+
+/* Header Text styling */
+.events-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.events-badge {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #3a5a47;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.events-heading {
+  margin: 0 0 24px 0;
+}
+
+.events-heading span {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 75.6px;
+  color: #1f2d25;
+  letter-spacing: -1.8px;
+}
+
+.events-subtitle {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 32.5px;
+  color: #5a6b62;
+  max-width: 768px;
+}
+
+/* Stacked Row Cards Layout */
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.event-card {
+  display: flex;
+  width: 100%;
+  height: 433.7px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.05), 0px 2px 4px -2px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+/* Left Image Box */
+.event-img-box {
+  width: 40%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.event-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.event-type-badge {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  background-color: rgba(184, 86, 63, 0.95);
+  border-radius: 100px;
+  padding: 8px 16px;
+  box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.event-type-badge span {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+/* Right Content Box */
+.event-content {
+  width: 60%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.event-title {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 43.2px;
+  color: #1f2d25;
+  letter-spacing: -0.9px;
+  margin: 0 0 16px 0;
+}
+
+.event-desc {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 29.25px;
+  color: #5a6b62;
+  margin: 0 0 32px 0;
+}
+
+/* Meta list items */
+.event-meta-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.event-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #5a6b62;
+}
+
+.event-meta-icon {
+  width: 20px;
+  height: 20px;
+  color: #5a6b62;
+  flex-shrink: 0;
+}
+
+/* Register Button styling */
+.event-register-btn {
+  background-color: #3a5a47;
+  color: #ffffff !important;
+  text-decoration: none;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  width: 160px;
+  height: 48px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  box-sizing: border-box;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+}
+
+.event-register-btn:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+.event-btn-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Responsiveness Media Queries */
+@media (max-width: 992px) {
+  .event-card {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .event-img-box {
+    width: 100%;
+    height: 320px;
+  }
+  
+  .event-content {
+    width: 100%;
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .events-section {
+    padding: 60px 16px;
+  }
+  
+  .events-container {
+    padding: 0;
+    gap: 48px;
+  }
+
+  .events-heading span {
+    font-size: 48px;
+    line-height: 52px;
+  }
+
+  .events-subtitle {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  
+  .event-title {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .event-desc {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 24px;
+  }
+  
+  .event-register-btn {
+    width: 100%;
+  }
+}

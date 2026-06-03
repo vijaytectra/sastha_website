@@ -1,0 +1,375 @@
+/* Tamil School Section CSS */
+
+.school-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 100px 62.4px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.school-container {
+  width: 100%;
+  max-width: 1280px;
+  box-sizing: border-box;
+  padding: 0 32px;
+}
+
+/* Header Alignment & Styles */
+.school-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 80px; /* Space between header and cards */
+}
+
+.school-badge {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #3a5a47;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.school-heading {
+  margin: 0 0 24px 0;
+}
+
+.school-heading span {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 75.6px;
+  color: #1f2d25;
+  letter-spacing: -1.8px;
+}
+
+.school-subtitle {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 32.5px;
+  color: #5a6b62;
+  max-width: 768px;
+}
+
+/* Cards Grid Layout */
+.school-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 402.6px);
+  gap: 32px;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 80px;
+  box-sizing: border-box;
+}
+
+/* Card Style */
+.school-card {
+  background-color: #f5f1ea;
+  border-radius: 16px;
+  box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.05), 0px 2px 4px -1px rgba(0, 0, 0, 0.03);
+  padding: 40px;
+  height: 421.188px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.school-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.08), 0px 4px 6px -2px rgba(0, 0, 0, 0.04);
+}
+
+.school-card-icon-box {
+  width: 64px;
+  height: 64px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #2d5240;
+  margin-bottom: 32px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.school-card-icon-box svg {
+  width: 32px;
+  height: 32px;
+}
+
+.school-card-title {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #1f2d25;
+  letter-spacing: -0.6px;
+  margin: 0 0 12px 0;
+}
+
+.school-card-age {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #b8563f;
+  letter-spacing: 0.35px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.school-card-desc {
+  margin: 0 0 auto 0; /* Pushes button to bottom */
+  font-family: 'Manrope', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 26px;
+  color: #5a6b62;
+}
+
+.school-card-btn {
+  width: 100%;
+  height: 51.2px;
+  background-color: #fffcf7;
+  border: 1.6px solid #3a5a47;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  color: #3a5a47 !important;
+  text-decoration: none;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.school-card-btn:hover {
+  background-color: #3a5a47;
+  color: #ffffff !important;
+}
+
+.school-card-btn-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Enrollment Banner Split Layout */
+.school-banner {
+  display: flex;
+  width: 100%;
+  height: 725.35px;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* Left Content Column */
+.school-banner-content {
+  background-color: #3a5a47;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.school-banner-icon-box {
+  width: 56px;
+  height: 56px;
+  color: #ffffff;
+  margin-bottom: 32px;
+}
+
+.school-banner-icon-box svg {
+  width: 56px;
+  height: 56px;
+}
+
+.school-banner-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 58.8px;
+  color: #ffffff;
+  letter-spacing: -1.4px;
+  margin: 0 0 24px 0;
+}
+
+.school-banner-desc {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 29.25px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 40px 0;
+}
+
+.school-banner-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.school-banner-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.school-banner-bullet {
+  width: 8px;
+  height: 8px;
+  background-color: #98b89d;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.school-banner-btn {
+  background-color: #b8563f;
+  color: #ffffff !important;
+  text-decoration: none;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  height: 56px;
+  padding: 0 32px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.school-banner-btn:hover {
+  background-color: #a34a35;
+  transform: translateY(-1px);
+}
+
+/* Right Image Column */
+.school-banner-image-box {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.school-banner-picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.school-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1280px) {
+  .school-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (max-width: 992px) {
+  .school-banner {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .school-banner-content {
+    width: 100%;
+    padding: 48px;
+  }
+  
+  .school-banner-image-box {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .school-section {
+    padding: 60px 16px;
+  }
+  
+  .school-container {
+    padding: 0;
+  }
+
+  .school-heading span {
+    font-size: 48px;
+    line-height: 52px;
+  }
+
+  .school-subtitle {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .school-cards-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 24px;
+  }
+  
+  .school-card {
+    height: auto;
+    padding: 32px 24px;
+  }
+
+  .school-card-icon-box {
+    margin-bottom: 24px;
+  }
+
+  .school-banner-content {
+    padding: 32px 24px;
+  }
+
+  .school-banner-heading {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .school-banner-btn {
+    width: 100%;
+    font-size: 16px;
+  }
+}

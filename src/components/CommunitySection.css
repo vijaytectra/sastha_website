@@ -1,0 +1,292 @@
+/* Community Section CSS (AboutSTF) */
+
+.comm-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 100px 62.4px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comm-container {
+  width: 100%;
+  max-width: 1280px;
+  box-sizing: border-box;
+  padding: 0 32px;
+}
+
+.comm-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 96px; /* Gap from Figma: 684px start of content - 588px end of image = 96px */
+  width: 100%;
+}
+
+/* Left Column: Visuals & overlapping elements */
+.comm-visuals {
+  position: relative;
+  width: 588px;
+  height: 750px; /* Extended height to fit overlapping floating badge */
+  flex-shrink: 0;
+}
+
+.comm-img-box {
+  position: relative;
+  width: 588px;
+  height: 650px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.comm-picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.comm-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.comm-img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(58, 90, 71, 0.3), rgba(0, 0, 0, 0));
+}
+
+/* Floating Badge */
+.comm-floating-badge {
+  position: absolute;
+  left: 200px; /* Positioned to overlap left side image */
+  bottom: 0px; /* Overlaps bottom of the 650px image */
+  background-color: #b8563f;
+  width: 320px;
+  height: 192px;
+  border-radius: 16px;
+  box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 10;
+}
+
+.comm-badge-num {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+  color: #ffffff;
+  letter-spacing: -1.2px;
+  margin-bottom: 12px;
+}
+
+.comm-badge-text {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 26px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Right Column: Copy & layout */
+.comm-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 588px;
+  flex-shrink: 0;
+}
+
+.comm-section-badge {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #3a5a47;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.comm-heading {
+  margin: 0 0 32px 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 67.2px;
+  color: #1f2d25;
+  letter-spacing: -1.6px;
+}
+
+.comm-paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 48px;
+  width: 100%;
+}
+
+.comm-para {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 29.25px;
+  color: #5a6b62;
+}
+
+/* Highlights Grid */
+.comm-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px 24px;
+  width: 100%;
+}
+
+.comm-highlight-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.comm-highlight-icon-box {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.highlight-green {
+  background-color: rgba(58, 90, 71, 0.1);
+  color: #3a5a47;
+}
+
+.highlight-rust {
+  background-color: rgba(184, 86, 63, 0.1);
+  color: #b8563f;
+}
+
+.comm-icon-wrapper svg {
+  width: 28px;
+  height: 28px;
+}
+
+.comm-highlight-texts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.comm-highlight-title {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1f2d25;
+}
+
+.comm-highlight-desc {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22.75px;
+  color: #5a6b62;
+}
+
+/* Responsiveness */
+@media (max-width: 1200px) {
+  .comm-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .comm-visuals {
+    width: 100%;
+    max-width: 588px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .comm-img-box {
+    width: 100%;
+    height: 480px;
+  }
+
+  .comm-floating-badge {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    margin-top: -80px;
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .comm-content {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .comm-heading {
+    text-align: center;
+  }
+
+  .comm-paragraphs {
+    align-items: center;
+  }
+
+  .comm-highlight-item {
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .comm-section {
+    padding: 60px 16px;
+  }
+  
+  .comm-container {
+    padding: 0;
+  }
+
+  .comm-img-box {
+    height: 360px;
+  }
+
+  .comm-heading {
+    font-size: 40px;
+    line-height: 44px;
+  }
+
+  .comm-para {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .comm-highlights-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

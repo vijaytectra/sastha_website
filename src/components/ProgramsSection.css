@@ -1,0 +1,278 @@
+/* Programs & Initiatives Section CSS */
+
+.prog-section {
+  width: 100%;
+  background-color: #faf8f5;
+  padding: 100px 119.6px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prog-container {
+  width: 100%;
+  max-width: 1280px;
+  box-sizing: border-box;
+  padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px; /* Space between header and grid */
+}
+
+/* Header Text styling */
+.prog-header {
+  width: 100%;
+  text-align: center;
+}
+
+.prog-heading {
+  margin: 0 0 16px 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 48px;
+  color: #2d5240;
+  letter-spacing: -1px;
+}
+
+.prog-subtitle {
+  margin: 0;
+  font-family: 'General Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #4a5565;
+}
+
+/* Split Column Grid Layout */
+.prog-content-grid {
+  display: flex;
+  gap: 24px; /* Horizontal spacing between columns */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Base Card Styles */
+.prog-featured-card, .prog-sub-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.08), 0px 4px 6px -2px rgba(0, 0, 0, 0.04);
+}
+
+/* Left Featured Card properties */
+.prog-featured-card {
+  width: 699.3px;
+  height: 500px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.prog-card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.prog-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Gradient overlay to ensure text contrast */
+.prog-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.1) 100%);
+  z-index: 2;
+}
+
+/* Left featured content placement */
+.prog-featured-content {
+  position: relative;
+  z-index: 3;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.prog-featured-badge {
+  background-color: #a85f44;
+  height: 28px;
+  border-radius: 100px;
+  padding: 0 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.prog-featured-badge span {
+  font-family: 'General Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.prog-featured-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 36px;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.5px;
+}
+
+.prog-featured-desc {
+  font-family: 'General Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 512px;
+  margin: 0 0 24px 0;
+}
+
+.prog-featured-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff !important;
+  text-decoration: none;
+  font-family: 'General Sans', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+}
+
+.prog-featured-btn:hover {
+  opacity: 0.9;
+  transform: translateX(2px);
+}
+
+.prog-btn-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Right Stacked Column */
+.prog-stacked-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* Vertical gap between stacked cards */
+  flex-grow: 1;
+}
+
+/* Secondary stacked card properties */
+.prog-sub-card {
+  width: 100%;
+  height: 238px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.prog-sub-content {
+  position: relative;
+  z-index: 3;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.prog-sub-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.prog-sub-desc {
+  font-family: 'General Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+/* Responsiveness Media Queries */
+@media (max-width: 1200px) {
+  .prog-section {
+    padding: 100px 40px;
+  }
+  
+  .prog-content-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  
+  .prog-featured-card {
+    width: 100%;
+    max-width: 699px;
+  }
+  
+  .prog-stacked-column {
+    width: 100%;
+    max-width: 699px;
+  }
+}
+
+@media (max-width: 768px) {
+  .prog-section {
+    padding: 60px 16px;
+  }
+  
+  .prog-container {
+    padding: 0;
+    gap: 40px;
+  }
+
+  .prog-heading {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .prog-subtitle {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .prog-featured-card {
+    height: 400px;
+  }
+  
+  .prog-featured-content {
+    padding: 24px;
+  }
+
+  .prog-featured-title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .prog-featured-desc {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 16px;
+  }
+}

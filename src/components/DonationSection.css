@@ -1,0 +1,221 @@
+/* Donation Section CSS */
+
+.donate-section {
+  width: 100%;
+  background: linear-gradient(152.8deg, #2d5240 0%, #2f5442 12.5%, #315644 25%, #335946 37.5%, #355b48 50%, #375d4a 62.5%, #395f4c 75%, #3b624e 87.5%, #3d6450 100%);
+  padding: 128px 247.6px 100px 247.6px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.donate-container {
+  width: 100%;
+  max-width: 1280px;
+  box-sizing: border-box;
+  padding: 0 32px;
+}
+
+.donate-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Header Text styling */
+.donate-header {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.donate-heading {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.donate-heading span {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 68px;
+  color: #ffffff;
+  letter-spacing: -1.2px;
+}
+
+/* Description text properties */
+.donate-description-box {
+  width: 100%;
+  max-width: 768px;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.donate-desc {
+  margin: 0;
+  font-family: 'General Sans', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32.5px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Tiers layout */
+.donate-tiers-list {
+  display: flex;
+  gap: 24px; /* Gap between cards */
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 48px;
+  box-sizing: border-box;
+}
+
+/* Tier Glassmorphic Card */
+.donate-tier-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 0.8px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  width: 304px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 24px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.donate-tier-card:hover {
+  transform: translateY(-2px);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.donate-tier-amount {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 48px;
+  color: #ffffff;
+  margin-bottom: 12px;
+  letter-spacing: -1px;
+}
+
+.donate-tier-desc {
+  font-family: 'General Sans', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+
+/* CTA container & button style */
+.donate-cta-box {
+  margin-bottom: 24px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.donate-cta-btn {
+  width: 275.100px;
+  height: 64px;
+  background-color: #a85f44;
+  border: none;
+  border-radius: 100px;
+  color: #ffffff;
+  font-family: 'General Sans', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.donate-cta-btn:hover {
+  background-color: #925039;
+  transform: translateY(-1px);
+}
+
+.donate-cta-btn:active {
+  transform: translateY(0);
+}
+
+.donate-cta-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* Tax Status message */
+.donate-tax-status {
+  margin: 0;
+  text-align: center;
+}
+
+.donate-tax-status span {
+  font-family: 'General Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .donate-section {
+    padding: 100px 40px;
+  }
+  
+  .donate-tiers-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .donate-section {
+    padding: 60px 16px;
+  }
+  
+  .donate-container {
+    padding: 0;
+  }
+
+  .donate-heading span {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .donate-desc {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .donate-tiers-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .donate-tier-card {
+    width: 100%;
+    max-width: 320px;
+  }
+  
+  .donate-cta-btn {
+    width: 100%;
+    max-width: 320px;
+  }
+}
