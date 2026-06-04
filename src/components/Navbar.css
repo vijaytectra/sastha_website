@@ -110,42 +110,124 @@
   transform: translateY(0);
 }
 
-/* Mobile Toggle Hamburger styling */
+/* Mobile nav toggle — pill MENU / CLOSE (staggered line icon) */
 .navbar-toggle {
   display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 24px;
-  height: 18px;
-  background: transparent;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 9px 16px 9px 12px;
+  min-height: 44px;
+  background: none;
   border: none;
+  border-radius: 0;
   cursor: pointer;
-  padding: 0;
   z-index: 1010;
+  box-sizing: border-box;
+  color: #2d5240;
+  transition: opacity 0.2s ease;
 }
 
-.navbar-toggle:focus {
-  outline: none;
+.navbar-toggle:hover {
+  opacity: 0.85;
 }
 
-.toggle-line {
-  width: 100%;
+.navbar-toggle:focus-visible {
+  outline: 2px solid #2d5240;
+  outline-offset: 2px;
+}
+
+.navbar-toggle-label {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: currentColor;
+  white-space: nowrap;
+}
+
+.navbar-toggle-icon {
+  position: relative;
+  width: 20px;
+  height: 10px;
+  flex-shrink: 0;
+}
+
+/* Staggered two-line menu icon */
+.navbar-stagger-lines {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  opacity: 1;
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.navbar-stagger-line {
+  display: block;
   height: 2px;
-  background-color: #2d5240;
-  transition: all 0.3s ease;
-  transform-origin: left center;
+  background-color: currentColor;
+  border-radius: 0;
+  transition: transform 0.25s ease;
 }
 
-/* Toggle menu animation states */
-.toggle-line.open:nth-child(1) {
+.navbar-stagger-line--top {
+  width: 11px;
+  align-self: flex-end;
+}
+
+.navbar-stagger-line--bottom {
+  width: 20px;
+  align-self: flex-start;
+}
+
+/* Close X (hidden until open) */
+.navbar-close-mark {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.22s ease;
+}
+
+.navbar-close-line {
+  position: absolute;
+  width: 18px;
+  height: 2px;
+  background-color: currentColor;
+  border-radius: 0;
+  transition: transform 0.25s ease;
+}
+
+.navbar-close-line:nth-child(1) {
+  transform: rotate(0deg);
+}
+
+.navbar-close-line:nth-child(2) {
+  transform: rotate(0deg);
+}
+
+.navbar-toggle.is-open .navbar-stagger-lines {
+  opacity: 0;
+  transform: scale(0.85);
+}
+
+.navbar-toggle.is-open .navbar-close-mark {
+  opacity: 1;
+}
+
+.navbar-toggle.is-open .navbar-close-line:nth-child(1) {
   transform: rotate(45deg);
 }
 
-.toggle-line.open:nth-child(2) {
-  opacity: 0;
-}
-
-.toggle-line.open:nth-child(3) {
+.navbar-toggle.is-open .navbar-close-line:nth-child(2) {
   transform: rotate(-45deg);
 }
 
@@ -160,7 +242,31 @@
   }
 
   .navbar-toggle {
-    display: flex;
+    display: inline-flex;
+    padding: 8px 14px 8px 11px;
+    gap: 8px;
+  }
+
+  .navbar-toggle-label {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+  }
+
+  .navbar-toggle-icon {
+    width: 18px;
+    height: 9px;
+  }
+
+  .navbar-stagger-lines {
+    gap: 3px;
+  }
+
+  .navbar-stagger-line--top {
+    width: 10px;
+  }
+
+  .navbar-stagger-line--bottom {
+    width: 18px;
   }
 
   .navbar-logo {

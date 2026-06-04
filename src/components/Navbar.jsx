@@ -3,10 +3,9 @@ import "./Navbar.css";
 
 /**
  * Navbar Component
- * 
- * Re-implemented exactly from Figma design specs.
+ *
  * Uses vanilla CSS (no Tailwind) and semantic HTML structure.
- * Supports fully responsive desktop and mobile views.
+ * Mobile toggle: pill MENU / CLOSE button with staggered line icon.
  */
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -32,15 +31,35 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Mobile Toggle Button */}
-        <button className="navbar-toggle" onClick={toggleMenu} aria-label="Toggle menu">
-          <span className={`toggle-line ${menuOpen ? "open" : ""}`}></span>
-          <span className={`toggle-line ${menuOpen ? "open" : ""}`}></span>
-          <span className={`toggle-line ${menuOpen ? "open" : ""}`}></span>
+        {/* Mobile nav toggle — pill + staggered lines / close */}
+        <button
+          type="button"
+          className={`navbar-toggle ${menuOpen ? "is-open" : ""}`}
+          onClick={toggleMenu}
+          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={menuOpen}
+          aria-controls="navbar-mobile-menu"
+        >
+          <span className="navbar-toggle-icon" aria-hidden="true">
+            <span className="navbar-stagger-lines">
+              <span className="navbar-stagger-line navbar-stagger-line--top" />
+              <span className="navbar-stagger-line navbar-stagger-line--bottom" />
+            </span>
+            <span className="navbar-close-mark">
+              <span className="navbar-close-line" />
+              <span className="navbar-close-line" />
+            </span>
+          </span>
+          <span className="navbar-toggle-label">
+            {menuOpen ? "Close" : "Menu"}
+          </span>
         </button>
 
         {/* Navigation Items */}
-        <nav className={`navbar-nav ${menuOpen ? "mobile-open" : ""}`}>
+        <nav
+          id="navbar-mobile-menu"
+          className={`navbar-nav ${menuOpen ? "mobile-open" : ""}`}
+        >
           <div className="navbar-links">
             <a href="#about" className="navbar-link" onClick={() => setMenuOpen(false)}>
               About
