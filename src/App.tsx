@@ -32,7 +32,7 @@ export default function App() {
 
       {/* Main Sections */}
       <main style={{ flexGrow: 1, width: "100%" }}>
-        <div style={{ height: "80px" }}></div> {/* Spacer to offset fixed Navbar */}
+        <div className="navbar-offset" aria-hidden="true" />
         <HeroSection />
         <StatsSection />
         <CommunitySection />
