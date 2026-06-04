@@ -1,11 +1,8 @@
 /* Donation Section CSS — mobile-first responsive */
 
 /*
- * Breakpoints
- * -----------
- * Mobile  : default (< 640px)   → 1 column tiers, compact type
- * Tablet  : 640px – 1024px     → 3-column tier grid (wraps to 2 if needed)
- * Desktop : min-width 1025px   → full spacing, largest heading
+ * Tier cards: always 3 columns (all screen sizes)
+ * Heading/CTA breakpoints: mobile → tablet (640px) → desktop (1025px)
  */
 
 .donate-section {
@@ -84,32 +81,33 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* Tiers — mobile: single column stack */
+/* Tiers — always 3 equal columns; scales down on narrow viewports */
 .donate-tiers-list {
   display: grid;
   width: 100%;
   min-width: 0;
-  max-width: 1000px;
+  max-width: 100%;
   margin-bottom: clamp(24px, 4vw, 48px);
   box-sizing: border-box;
-  gap: clamp(12px, 3vw, 24px);
-  grid-template-columns: 1fr;
+  gap: clamp(8px, 2vw, 24px);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
 }
 
 .donate-tier-card {
   background-color: rgba(255, 255, 255, 0.1);
   border: 0.8px solid rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
+  border-radius: clamp(8px, 2vw, 12px);
   width: 100%;
   min-width: 0;
-  min-height: 140px;
+  min-height: clamp(100px, 28vw, 140px);
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  padding: clamp(20px, 4vw, 24px);
+  padding: clamp(12px, 3vw, 24px) clamp(8px, 2vw, 16px);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   transition: transform 0.2s ease, background-color 0.2s ease;
@@ -124,22 +122,26 @@
   color: #fff;
   text-align: center;
   font-family: 'Manrope', sans-serif;
-  font-size: clamp(32px, 8vw, 48px);
+  font-size: clamp(22px, 6vw, 48px);
   font-style: normal;
   font-weight: 500;
   line-height: 1.1;
-  margin-bottom: 12px;
-  letter-spacing: -1px;
+  margin: 0 0 clamp(6px, 1.5vw, 12px) 0;
+  letter-spacing: -0.5px;
+  width: 100%;
 }
 
 .donate-tier-desc {
   font-family: 'General Sans', sans-serif;
   font-weight: 500;
-  font-size: clamp(13px, 2vw, 14px);
-  line-height: 1.4;
+  font-size: clamp(10px, 2.8vw, 14px);
+  line-height: 1.35;
   color: rgba(255, 255, 255, 0.8);
   text-align: center;
-  max-width: 260px;
+  width: 100%;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 /* CTA — min 44×44px touch target */
@@ -207,19 +209,19 @@
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* Tablet: 640px – 1024px — 3 equal columns when space allows */
+/* Tablet: 640px+ — larger type & spacing (tiers stay 3-across) */
 @media (min-width: 640px) {
   .donate-heading span {
     font-size: clamp(36px, 5.5vw, 52px);
     letter-spacing: -1px;
   }
 
-  .donate-tiers-list {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .donate-tier-amount {
+    letter-spacing: -1px;
   }
 
-  .donate-tier-card {
-    min-height: 140px;
+  .donate-tier-desc {
+    font-size: clamp(12px, 2vw, 14px);
   }
 
   .donate-cta-btn {
@@ -249,19 +251,15 @@
 
   .donate-tiers-list {
     gap: 24px;
-    max-width: 100%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .donate-tier-card {
-    max-width: 304px;
-    width: 100%;
-    justify-self: center;
-  }
-
-  /* Center the 3 fixed-max cards as a group */
-  .donate-tiers-list {
-    grid-template-columns: repeat(3, minmax(0, 304px));
-    justify-content: center;
+    min-height: 140px;
+    max-width: none;
   }
 
   .donate-cta-btn {
