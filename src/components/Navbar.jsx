@@ -5,7 +5,7 @@ import "./Navbar.css";
  * Navbar Component
  *
  * Uses vanilla CSS (no Tailwind) and semantic HTML structure.
- * Mobile toggle: pill MENU / CLOSE button with staggered line icon.
+ * Mobile toggle: icon-only button with staggered lines / close mark.
  */
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -31,7 +31,7 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Mobile nav toggle — pill + staggered lines / close */}
+        {/* Mobile nav toggle — icon only */}
         <button
           type="button"
           className={`navbar-toggle ${menuOpen ? "is-open" : ""}`}
@@ -49,9 +49,6 @@ export default function Navbar() {
               <span className="navbar-close-line" />
               <span className="navbar-close-line" />
             </span>
-          </span>
-          <span className="navbar-toggle-label">
-            {menuOpen ? "Close" : "Menu"}
           </span>
         </button>
 

@@ -142,17 +142,6 @@
   outline-offset: 2px;
 }
 
-.navbar-toggle-label {
-  font-family: 'Manrope', sans-serif;
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: currentColor;
-  white-space: nowrap;
-}
-
 .navbar-toggle-icon {
   position: relative;
   width: 20px;
@@ -251,14 +240,10 @@
 
   .navbar-toggle {
     display: inline-flex;
-    padding: 6px 14px 6px 12px;
+    padding: 10px;
     min-height: 44px;
-    gap: 10px;
-  }
-
-  .navbar-toggle-label {
-    font-size: 12px;
-    letter-spacing: 0.14em;
+    min-width: 44px;
+    gap: 0;
   }
 
   .navbar-toggle-icon {
