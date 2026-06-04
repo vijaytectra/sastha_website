@@ -238,7 +238,7 @@
 /* Responsiveness Media Query */
 @media (max-width: 768px) {
   :root {
-    --navbar-height: 56px;
+    --navbar-height: 64px;
   }
 
   .navbar-header {
@@ -251,39 +251,48 @@
 
   .navbar-toggle {
     display: inline-flex;
-    padding: 4px 12px 4px 10px;
-    min-height: 36px;
-    gap: 8px;
+    padding: 6px 14px 6px 12px;
+    min-height: 44px;
+    gap: 10px;
   }
 
   .navbar-toggle-label {
-    font-size: 10px;
-    letter-spacing: 0.12em;
+    font-size: 12px;
+    letter-spacing: 0.14em;
   }
 
   .navbar-toggle-icon {
-    width: 18px;
-    height: 9px;
+    width: 24px;
+    height: 12px;
   }
 
   .navbar-stagger-lines {
-    gap: 3px;
+    gap: 4px;
+  }
+
+  .navbar-stagger-line {
+    height: 2.5px;
   }
 
   .navbar-stagger-line--top {
-    width: 10px;
+    width: 13px;
   }
 
   .navbar-stagger-line--bottom {
-    width: 18px;
+    width: 24px;
+  }
+
+  .navbar-close-line {
+    width: 20px;
+    height: 2.5px;
   }
 
   .navbar-logo {
-    max-width: min(200px, 58vw);
+    max-width: min(240px, 62vw);
   }
 
   .navbar-logo-img {
-    height: clamp(28px, 8vw, 34px);
+    height: clamp(38px, 11vw, 44px);
   }
 
   .navbar-nav {
@@ -326,12 +335,13 @@
 /* Small mobile: prevent header logo overflow (320px–480px) */
 @media (max-width: 480px) {
   .navbar-logo {
-    max-width: min(180px, 62vw);
+    max-width: min(220px, 68vw);
   }
 
   .navbar-logo-img {
-    height: 28px;
+    height: 36px;
   }
+
 }
 
 .navbar-offset {
