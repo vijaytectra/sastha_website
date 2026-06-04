@@ -301,7 +301,7 @@
 
   .comm-highlights-grid {
     grid-template-columns: 1fr;
-    row-gap: 24px;
+    row-gap: 40px;
   }
 
   .comm-highlight-item {
