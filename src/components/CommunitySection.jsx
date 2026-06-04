@@ -1,13 +1,12 @@
 import React from "react";
 import "./CommunitySection.css";
 
-
 export default function CommunitySection() {
   const highlights = [
     {
       title: "Education Excellence",
       desc: "Comprehensive Tamil curriculum for all ages",
-      theme: "highlight-green",
+      theme: "highlight-gray",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
@@ -18,7 +17,7 @@ export default function CommunitySection() {
     {
       title: "Community Building",
       desc: "Strong family connections and support",
-      theme: "highlight-rust",
+      theme: "highlight-amber",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -31,7 +30,7 @@ export default function CommunitySection() {
     {
       title: "Cultural Heritage",
       desc: "Authentic Tamil traditions and values",
-      theme: "highlight-green",
+      theme: "highlight-gray",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
@@ -41,7 +40,7 @@ export default function CommunitySection() {
     {
       title: "Recognized Programs",
       desc: "Award-winning educational initiatives",
-      theme: "highlight-rust",
+      theme: "highlight-amber",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <circle cx="12" cy="8" r="7"/>
@@ -55,43 +54,41 @@ export default function CommunitySection() {
     <section className="comm-section" id="about" data-node-id="1:92">
       <div className="comm-container" data-node-id="1:93">
         <div className="comm-row" data-node-id="1:94">
-          
-          {/* Left Column: Visuals & Badge */}
-          <div className="comm-visuals">
-            <div className="comm-img-box" data-node-id="1:95">
-              <img src="assets/13.jpg" alt="Students learning in class" className="comm-img" />
-              <div className="comm-img-overlay" data-node-id="1:97"></div>
+          <div className="comm-left" data-node-id="1:95">
+            <div className="comm-left-header">
+              <span className="comm-section-badge" data-node-id="1:105">
+                About Sangam Tamil Foundation
+              </span>
+              <h2 className="comm-heading" data-node-id="1:106">
+                Connecting Generations Through Tamil Language and Culture
+              </h2>
             </div>
 
-            {/* Overlapping Badge */}
-            <div className="comm-floating-badge" data-node-id="1:98">
-              <span className="comm-badge-num" data-node-id="1:100">25+</span>
-              <p className="comm-badge-text" data-node-id="1:102">
-                Years of dedicated service to the Tamil community
-              </p>
+            <div className="comm-video-box" data-node-id="1:97">
+              <video
+                className="comm-video"
+                src="/hero_video.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                aria-label="Sangam Tamil Foundation community and cultural programs"
+              />
             </div>
           </div>
 
-          {/* Right Column: Copy & Highlights */}
-          <div className="comm-content" data-node-id="1:103">
-            <span className="comm-section-badge" data-node-id="1:105">About Sangam Tamil Foundation</span>
-            <h2 className="comm-heading" data-node-id="1:106">
-              <span data-node-id="1:107">Connecting Generations Through Tamil Language and Culture</span>
-            </h2>
-            
+          <div className="comm-divider" aria-hidden="true" />
+
+          <div className="comm-right" data-node-id="1:103">
             <div className="comm-paragraphs" data-node-id="1:108">
               <p className="comm-para" data-node-id="1:110">
-                Sangam Tamil Foundation (STF) is a nonprofit organization dedicated to preserving and promoting Tamil language, literature, and cultural heritage. Founded over 25 years ago, STF has become a cornerstone of the Tamil community, serving families who wish to maintain their cultural identity while thriving in a diverse society.
-              </p>
-              <p className="comm-para" data-node-id="1:112">
-                Our mission extends beyond language instruction. We create meaningful connections between generations, foster cultural pride, and build a supportive community where Tamil traditions, values, and heritage are celebrated and passed down to future generations.
+                Sangam Tamil Foundation (STF) is a nonprofit dedicated to preserving Tamil language, literature, and cultural heritage. For over 25 years, we&apos;ve been a cornerstone of the Tamil community — connecting generations, fostering cultural pride, and ensuring Tamil traditions thrive in a diverse world.
               </p>
               <p className="comm-para" data-node-id="1:114">
-                Through our accredited Tamil school, cultural programs, and community events, we provide comprehensive educational experiences that honor the richness of Tamil heritage while preparing students for a globalized world.
+                Through our accredited Tamil school, cultural programs, and community events, we offer rich educational experiences that honor Tamil heritage while preparing students for a globalized future.
               </p>
             </div>
 
-            {/* Highlights Grid */}
             <div className="comm-highlights-grid" data-node-id="1:115">
               {highlights.map((item, index) => (
                 <div key={index} className="comm-highlight-item" data-node-id={`highlight-${index}`}>
@@ -105,9 +102,7 @@ export default function CommunitySection() {
                 </div>
               ))}
             </div>
-
           </div>
-
         </div>
       </div>
     </section>
