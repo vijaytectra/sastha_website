@@ -11,7 +11,8 @@ export default function VolunteerSection() {
         <div className="vol-header" data-node-id="1:524">
           <span className="vol-badge" data-node-id="1:525">Get Involved</span>
           <h2 className="vol-heading" data-node-id="1:526">
-            <span data-node-id="1:527">Join Our Mission to Preserve Tamil Heritage</span>
+            <span data-node-id="1:527">Join Our Mission to Preserve</span>
+            <span>Tamil Heritage</span>
           </h2>
           <p className="vol-subtitle" data-node-id="1:528">
             Whether through volunteering your time or supporting our programs financially, every contribution helps strengthen our community.
