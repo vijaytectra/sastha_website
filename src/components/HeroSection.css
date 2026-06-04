@@ -5,7 +5,7 @@
   position: relative;
   width: 100%;
   background-color: white; /* Primary sand/light beige background */
-  padding: 100px 32px;
+  padding: 100px var(--section-gutter-x, 32px);
   box-sizing: border-box;
   overflow: hidden;
   display: flex;
@@ -45,7 +45,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1280px;
+  max-width: var(--section-max-width, 1280px);
   height: 710px;
   position: relative;
   z-index: 2;
@@ -282,7 +282,7 @@
 
 @media (max-width: 768px) {
   .hero-section {
-    padding: 32px 16px 16px 16px;
+    padding: 32px var(--section-gutter-x-mobile, 16px) 16px;
   }
 
   .hero-heading-main, .hero-heading-sub {

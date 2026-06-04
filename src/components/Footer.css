@@ -1,9 +1,19 @@
 /* Footer Section CSS */
 
+/*
+ * Responsive breakpoints
+ * ----------------------
+ * Desktop : min-width 1024px  → 4 columns in one row
+ * Tablet  : 768px – 1023px   → 2×2 grid; brand spans full width
+ * Mobile  : max-width 767px   → single column stack
+ */
+
 .footer-root {
   width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
   background-color: #1f3028;
-  padding: 96px 62.4px 40.8px 62.4px;
+  padding: clamp(48px, 8vw, 96px) var(--section-gutter-x, 32px) clamp(32px, 4vw, 40.8px);
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -12,21 +22,23 @@
 
 .footer-container {
   width: 100%;
-  max-width: 1280px;
+  max-width: var(--section-max-width, 1280px);
   box-sizing: border-box;
-  padding: 0 32px;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 64px; /* Vertical gap between main sections */
+  gap: clamp(32px, 5vw, 64px);
+  min-width: 0;
 }
 
-/* Row 1: Columns Layout */
+/* Row 1: columns — desktop 4-column grid */
 .footer-cols {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 32px;
+  display: grid;
+  grid-template-columns: minmax(240px, 1.25fr) repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: clamp(24px, 3vw, 48px) clamp(20px, 2.5vw, 32px);
   width: 100%;
+  min-width: 0;
   box-sizing: border-box;
 }
 
@@ -34,13 +46,23 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 270px;
+  width: 100%;
+  min-width: 0;
   box-sizing: border-box;
+}
+
+/* Brand column: logo → mission → socials (vertical stack, never inline with icons) */
+.col-brand {
+  gap: 0;
 }
 
 .footer-brand-header {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .footer-brand-title {
@@ -48,39 +70,64 @@
   align-items: center;
   margin: 0 0 16px 0;
   flex-shrink: 0;
+  width: 100%;
 }
 
+/* Emblem logo — height-led scaling, portrait aspect ratio */
 .footer-logo-img {
-  height: 64px; /* Fixed height for the logo to make it prominent in the footer */
-  width: auto;
   display: block;
+  width: auto;
+  height: clamp(56px, 10vw, 80px);
+  max-width: min(140px, 100%);
+  object-fit: contain;
+  object-position: left center;
 }
 
 .footer-brand-desc {
-  margin: 0 0 32px 0;
+  margin: 0;
+  padding: 0;
   font-family: 'Manrope', sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 26px;
   color: rgba(255, 255, 255, 0.7);
   width: 100%;
+  max-width: 320px;
 }
 
-/* Social icons layout */
+/*
+ * Social icons — separated block below mission text (fixes merge/overlap)
+ * margin-top creates clear gap; flex row keeps circles evenly spaced
+ */
 .footer-social-links {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
   gap: 12px;
+  margin-top: 28px;
+  padding-top: 0;
+  width: 100%;
+  max-width: 100%;
+  flex-shrink: 0;
+  isolation: isolate;
 }
 
 .footer-social-link {
   background-color: rgba(255, 255, 255, 0.1);
   width: 44px;
   height: 44px;
+  min-width: 44px;
+  min-height: 44px;
   border-radius: 50%;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   color: #ffffff;
+  text-decoration: none;
+  flex-shrink: 0;
+  box-sizing: border-box;
   transition: background-color 0.2s ease;
 }
 
@@ -91,9 +138,11 @@
 .social-icon {
   width: 20px;
   height: 20px;
+  display: block;
+  flex-shrink: 0;
+  pointer-events: none;
 }
 
-/* Section titles in column headers */
 .footer-col-title {
   margin: 0 0 24px 0;
   font-family: 'Manrope', sans-serif;
@@ -103,7 +152,6 @@
   color: #ffffff;
 }
 
-/* Links lists properties */
 .footer-links-list {
   list-style: none;
   padding: 0;
@@ -128,7 +176,6 @@
   color: #ffffff !important;
 }
 
-/* Column 4: Contact details */
 .footer-contact-list {
   list-style: none;
   padding: 0;
@@ -173,10 +220,10 @@
   color: #ffffff !important;
 }
 
-/* Row 2: Newsletter section */
+/* Newsletter */
 .footer-newsletter-row {
   border-top: 0.8px solid rgba(255, 255, 255, 0.1);
-  padding-top: 64px;
+  padding-top: clamp(32px, 5vw, 64px);
   width: 100%;
 }
 
@@ -210,6 +257,7 @@
   display: flex;
   gap: 16px;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .footer-email-input {
@@ -224,6 +272,8 @@
   font-size: 16px;
   width: 100%;
   max-width: 605px;
+  flex: 1 1 280px;
+  min-width: 0;
   box-sizing: border-box;
   transition: border-color 0.2s ease;
 }
@@ -258,13 +308,14 @@
   transform: translateY(-1px);
 }
 
-/* Row 3: Bottom layout */
 .footer-bottom-row {
   border-top: 0.8px solid rgba(255, 255, 255, 0.1);
-  padding-top: 40.8px;
+  padding-top: clamp(24px, 3vw, 40.8px);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -280,7 +331,8 @@
 
 .footer-legal-links {
   display: flex;
-  gap: 32px;
+  gap: clamp(16px, 3vw, 32px);
+  flex-wrap: wrap;
 }
 
 .footer-legal-links a {
@@ -297,56 +349,90 @@
   color: #ffffff !important;
 }
 
-/* Responsiveness Media Queries */
-@media (max-width: 1200px) {
+/* Tablet: 768px – 1023px — 2 columns; brand + contact full width */
+@media (max-width: 1023px) {
   .footer-cols {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 48px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px 32px;
   }
-  
-  .footer-col {
-    width: 100%;
+
+  .col-brand,
+  .col-contact {
+    grid-column: 1 / -1;
+  }
+
+  .footer-brand-desc {
+    max-width: 560px;
+  }
+
+  .footer-social-links {
+    margin-top: 24px;
   }
 }
 
-@media (max-width: 768px) {
+/* Mobile: ≤767px — brand & contact full width; Quick Links + Resources side-by-side */
+@media (max-width: 767px) {
   .footer-root {
-    padding: 32px 16px 40px 16px;
+    padding: 48px var(--section-gutter-x-mobile, 16px) 32px;
   }
-  
+
   .footer-container {
     padding: 0;
     gap: 32px;
   }
 
   .footer-cols {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px 16px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 20px;
+    row-gap: 36px;
   }
 
-  .col-brand, .col-contact {
-    grid-column: span 2;
+  .col-brand,
+  .col-contact {
+    grid-column: 1 / -1;
   }
 
+  /* Link columns share one row — equal width, aligned at top */
+  .footer-cols > .footer-col:not(.col-brand):not(.col-contact) {
+    min-width: 0;
+    align-self: start;
+  }
+
+  .footer-links-list a {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  /* Keep logo above text — do NOT row-align with mission (was causing icon merge) */
   .footer-brand-header {
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
+    gap: 0;
   }
 
   .footer-logo-img {
-    height: 72px; /* Slightly larger on mobile for better balance */
-    margin-top: 4px; /* Slight push down to align optically with first line of text */
+    height: clamp(52px, 14vw, 64px);
+    max-width: min(120px, 40vw);
+    margin-top: 0;
   }
 
-  .footer-brand-title, .footer-brand-desc {
-    margin: 0;
+  .footer-brand-title {
+    margin-bottom: 12px;
   }
-  
+
   .footer-brand-desc {
-    font-size: 15px; /* Slightly smaller text on mobile to balance with logo */
+    font-size: 15px;
     line-height: 24px;
+    max-width: 100%;
+  }
+
+  .footer-social-links {
+    margin-top: 24px;
+    gap: 14px;
+  }
+
+  .footer-col-title {
+    margin-bottom: 16px;
   }
 
   .footer-newsletter-row {
@@ -357,15 +443,16 @@
     flex-direction: column;
     gap: 16px;
   }
-  
+
   .footer-email-input {
     max-width: 100%;
+    flex: 1 1 auto;
   }
-  
+
   .footer-subscribe-btn {
     width: 100%;
   }
-  
+
   .footer-bottom-row {
     flex-direction: column-reverse;
     align-items: center;
@@ -373,10 +460,8 @@
     text-align: center;
     padding-top: 32px;
   }
-  
+
   .footer-legal-links {
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 16px;
   }

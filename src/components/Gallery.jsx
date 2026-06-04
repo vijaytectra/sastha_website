@@ -24,8 +24,8 @@ export default function Gallery() {
               alt="Community action moment 1" 
               className="gallery-img" 
             />
-            <div className="gallery-hover-overlay">
-              <span className="gallery-zoom-icon">+</span>
+            <div className="gallery-hover-overlay" aria-hidden="true">
+              <span className="gallery-zoom-icon" aria-hidden="true">+</span>
             </div>
           </div>
 
@@ -36,8 +36,8 @@ export default function Gallery() {
               alt="Community action moment 2" 
               className="gallery-img" 
             />
-            <div className="gallery-hover-overlay">
-              <span className="gallery-zoom-icon">+</span>
+            <div className="gallery-hover-overlay" aria-hidden="true">
+              <span className="gallery-zoom-icon" aria-hidden="true">+</span>
             </div>
           </div>
 
@@ -48,8 +48,8 @@ export default function Gallery() {
               alt="Community action moment 3" 
               className="gallery-img" 
             />
-            <div className="gallery-hover-overlay">
-              <span className="gallery-zoom-icon">+</span>
+            <div className="gallery-hover-overlay" aria-hidden="true">
+              <span className="gallery-zoom-icon" aria-hidden="true">+</span>
             </div>
           </div>
 
@@ -60,8 +60,8 @@ export default function Gallery() {
               alt="Community action moment 4" 
               className="gallery-img" 
             />
-            <div className="gallery-hover-overlay">
-              <span className="gallery-zoom-icon">+</span>
+            <div className="gallery-hover-overlay" aria-hidden="true">
+              <span className="gallery-zoom-icon" aria-hidden="true">+</span>
             </div>
           </div>
 
@@ -72,8 +72,8 @@ export default function Gallery() {
               alt="Community action moment 5" 
               className="gallery-img" 
             />
-            <div className="gallery-hover-overlay">
-              <span className="gallery-zoom-icon">+</span>
+            <div className="gallery-hover-overlay" aria-hidden="true">
+              <span className="gallery-zoom-icon" aria-hidden="true">+</span>
             </div>
           </div>
 
@@ -84,8 +84,8 @@ export default function Gallery() {
               alt="Community action moment 6" 
               className="gallery-img" 
             />
-            <div className="gallery-hover-overlay">
-              <span className="gallery-zoom-icon">+</span>
+            <div className="gallery-hover-overlay" aria-hidden="true">
+              <span className="gallery-zoom-icon" aria-hidden="true">+</span>
             </div>
           </div>
 
@@ -96,8 +96,8 @@ export default function Gallery() {
               alt="Community action moment 7" 
               className="gallery-img" 
             />
-            <div className="gallery-hover-overlay">
-              <span className="gallery-zoom-icon">+</span>
+            <div className="gallery-hover-overlay" aria-hidden="true">
+              <span className="gallery-zoom-icon" aria-hidden="true">+</span>
             </div>
           </div>
 
@@ -108,8 +108,8 @@ export default function Gallery() {
               alt="Community action moment 8" 
               className="gallery-img" 
             />
-            <div className="gallery-hover-overlay">
-              <span className="gallery-zoom-icon">+</span>
+            <div className="gallery-hover-overlay" aria-hidden="true">
+              <span className="gallery-zoom-icon" aria-hidden="true">+</span>
             </div>
           </div>
 
@@ -120,8 +120,8 @@ export default function Gallery() {
               alt="Community action moment 9" 
               className="gallery-img" 
             />
-            <div className="gallery-hover-overlay">
-              <span className="gallery-zoom-icon">+</span>
+            <div className="gallery-hover-overlay" aria-hidden="true">
+              <span className="gallery-zoom-icon" aria-hidden="true">+</span>
             </div>
           </div>
 
@@ -132,8 +132,8 @@ export default function Gallery() {
               alt="Community action moment 10" 
               className="gallery-img" 
             />
-            <div className="gallery-hover-overlay">
-              <span className="gallery-zoom-icon">+</span>
+            <div className="gallery-hover-overlay" aria-hidden="true">
+              <span className="gallery-zoom-icon" aria-hidden="true">+</span>
             </div>
           </div>
 

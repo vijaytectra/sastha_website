@@ -21,7 +21,14 @@ export default function Navbar() {
         {/* Brand / Logo */}
         <div className="navbar-brand">
           <a href="#" className="navbar-logo" aria-label="Sastha Tamil Foundation">
-            <img src="/Container.svg" alt="Sastha Tamil Foundation Logo" className="navbar-logo-img" />
+            <img
+              src="/logo_header.png"
+              alt="Sastha Tamil Foundation Logo"
+              className="navbar-logo-img"
+              width={240}
+              height={48}
+              decoding="async"
+            />
           </a>
         </div>
 

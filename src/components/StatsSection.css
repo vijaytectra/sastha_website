@@ -1,10 +1,18 @@
 /* Impact Statistics Section CSS */
 
+/*
+ * Responsive breakpoints
+ * ----------------------
+ * Desktop : min-width 1024px  → 4 cards per row
+ * Tablet  : 768px – 1023px    → 2 cards per row
+ * Mobile  : max-width 767px   → 1 card per row
+ */
+
 /* Base Section styling */
 .stats-section {
   width: 100%;
   background-color: #f5f1ea;
-  padding: 100px 62.4px;
+  padding: 100px var(--section-gutter-x, 32px);
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -17,10 +25,10 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 1280px;
-  gap: 80px; /* Spacing between header block and grid */
+  max-width: var(--section-max-width, 1280px);
+  gap: 80px;
   box-sizing: border-box;
-  padding: 0 32px;
+  padding: 0;
 }
 
 /* Header block alignment and styling */
@@ -59,34 +67,34 @@
 .stats-subtitle {
   margin: 0;
   font-family: 'Manrope', sans-serif;
-  font-weight: 300; /* Light */
+  font-weight: 300;
   font-size: 20px;
   line-height: 32.5px;
   color: #5a6b62;
   max-width: 768px;
 }
 
-/* Stats Cards Grid Layout */
+/* Stats Cards Grid — Desktop: 4 equal columns (≥ 1024px) */
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(4, 294px);
-  gap: 32px;
-  justify-content: center;
   width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
   box-sizing: border-box;
 }
 
-/* Individual Stat Card properties */
+/* Individual Stat Card */
 .stat-card {
   background-color: #ffffff;
   border-radius: 16px;
   box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.05), 0px 2px 4px -1px rgba(0, 0, 0, 0.03);
   padding: 40px;
-  height: 329.5px;
+  min-height: 329.5px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 100%;
   position: relative;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -96,14 +104,13 @@
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.08), 0px 4px 6px -2px rgba(0, 0, 0, 0.04);
 }
 
-/* Number text styled exactly per card */
 .stat-number {
   font-family: 'Manrope', sans-serif;
   font-weight: 700;
   font-size: 48px;
-  line-height: 72px;
+  line-height: 1.2;
   letter-spacing: -1.8px;
-  margin-bottom: 92px; /* Large space in figma */
+  margin: 0 0 auto 0;
 }
 
 .stat-color-green {
@@ -126,34 +133,68 @@
 .stat-card-desc {
   margin: 0;
   font-family: 'Manrope', sans-serif;
-  font-weight: 300; /* Light */
+  font-weight: 300;
   font-size: 14px;
   line-height: 22.75px;
   color: #5a6b62;
 }
 
-/* Responsiveness adjustments */
-@media (max-width: 1320px) {
+/* Tablet: 768px – 1023px → 2 cards per row */
+@media (max-width: 1023px) {
+  .stats-section {
+    padding: 80px var(--section-gutter-x, 32px);
+  }
+
+  .stats-container {
+    gap: 60px;
+    padding: 0;
+  }
+
+  .stats-heading span {
+    font-size: 56px;
+    line-height: 1.1;
+    letter-spacing: -1.2px;
+  }
+
+  .stats-subtitle {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
   .stats-grid {
-    grid-template-columns: repeat(2, 294px);
-    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
     gap: 32px;
+  }
+
+  .stat-card {
+    min-height: 280px;
+    padding: 36px 32px;
+  }
+
+  .stat-number {
+    font-size: 42px;
   }
 }
 
-@media (max-width: 768px) {
+/* Mobile: max-width 767px → 1 card per row */
+@media (max-width: 767px) {
   .stats-section {
-    padding: 32px 16px 60px 16px;
+    padding: 60px var(--section-gutter-x-mobile, 16px);
   }
-  
+
   .stats-container {
     padding: 0;
     gap: 48px;
   }
 
+  .stats-badge {
+    margin-bottom: 16px;
+  }
+
   .stats-heading span {
     font-size: 40px;
     line-height: 46px;
+    letter-spacing: -1px;
   }
 
   .stats-subtitle {
@@ -163,17 +204,21 @@
 
   .stats-grid {
     grid-template-columns: 1fr;
-    max-width: 320px;
     gap: 24px;
+    max-width: 100%;
   }
-  
+
   .stat-card {
-    width: 100%;
-    height: auto;
+    min-height: auto;
     padding: 32px 24px;
   }
 
   .stat-number {
+    font-size: 40px;
     margin-bottom: 24px;
+  }
+
+  .stat-card-title {
+    font-size: 17px;
   }
 }

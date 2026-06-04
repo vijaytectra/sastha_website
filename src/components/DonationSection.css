@@ -1,9 +1,19 @@
-/* Donation Section CSS */
+/* Donation Section CSS — mobile-first responsive */
+
+/*
+ * Breakpoints
+ * -----------
+ * Mobile  : default (< 640px)   → 1 column tiers, compact type
+ * Tablet  : 640px – 1024px     → 3-column tier grid (wraps to 2 if needed)
+ * Desktop : min-width 1025px   → full spacing, largest heading
+ */
 
 .donate-section {
   width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
   background-color: #2d5240;
-  padding: 128px 247.6px 100px 247.6px;
+  padding: clamp(48px, 10vw, 128px) var(--section-gutter-x, 32px) clamp(40px, 8vw, 100px);
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -12,9 +22,10 @@
 
 .donate-container {
   width: 100%;
-  max-width: 1280px;
+  max-width: var(--section-max-width, 1280px);
   box-sizing: border-box;
-  padding: 0 32px;
+  padding: 0;
+  min-width: 0;
 }
 
 .donate-inner {
@@ -22,12 +33,16 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  min-width: 0;
 }
 
-/* Header Text styling */
+/* Header */
 .donate-header {
-  margin-bottom: 24px;
+  margin-bottom: clamp(16px, 3vw, 24px);
   text-align: center;
+  width: 100%;
+  max-width: 900px;
+  padding: 0 4px;
 }
 
 .donate-heading {
@@ -35,57 +50,66 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.15em;
+  width: 100%;
 }
 
 .donate-heading span {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 500;
-  font-size: 60px;
-  line-height: 68px;
+  font-size: clamp(28px, 7vw, 44px);
+  line-height: 1.15;
   color: #ffffff;
-  letter-spacing: -1.2px;
+  letter-spacing: -0.8px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  max-width: 100%;
 }
 
-/* Description text properties */
+/* Description */
 .donate-description-box {
   width: 100%;
   max-width: 768px;
-  margin-bottom: 48px;
+  margin-bottom: clamp(24px, 4vw, 48px);
   text-align: center;
+  padding: 0 4px;
 }
 
 .donate-desc {
   margin: 0;
   font-family: 'General Sans', sans-serif;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 32.5px;
+  font-size: clamp(16px, 2.5vw, 20px);
+  line-height: 1.6;
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* Tiers layout */
+/* Tiers — mobile: single column stack */
 .donate-tiers-list {
-  display: flex;
-  gap: 24px; /* Gap between cards */
-  justify-content: center;
+  display: grid;
   width: 100%;
-  margin-bottom: 48px;
+  min-width: 0;
+  max-width: 1000px;
+  margin-bottom: clamp(24px, 4vw, 48px);
   box-sizing: border-box;
+  gap: clamp(12px, 3vw, 24px);
+  grid-template-columns: 1fr;
 }
 
-/* Tier Glassmorphic Card */
 .donate-tier-card {
   background-color: rgba(255, 255, 255, 0.1);
   border: 0.8px solid rgba(255, 255, 255, 0.2);
   border-radius: 12px;
-  width: 304px;
-  height: 140px;
+  width: 100%;
+  min-width: 0;
+  min-height: 140px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  padding: 24px;
+  padding: clamp(20px, 4vw, 24px);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   transition: transform 0.2s ease, background-color 0.2s ease;
@@ -97,13 +121,13 @@
 }
 
 .donate-tier-amount {
-  color: #FFF;
+  color: #fff;
   text-align: center;
   font-family: 'Manrope', sans-serif;
-  font-size: 48px;
+  font-size: clamp(32px, 8vw, 48px);
   font-style: normal;
   font-weight: 500;
-  line-height: 36px;
+  line-height: 1.1;
   margin-bottom: 12px;
   letter-spacing: -1px;
 }
@@ -111,23 +135,29 @@
 .donate-tier-desc {
   font-family: 'General Sans', sans-serif;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: clamp(13px, 2vw, 14px);
+  line-height: 1.4;
   color: rgba(255, 255, 255, 0.8);
   text-align: center;
+  max-width: 260px;
 }
 
-/* CTA container & button style */
+/* CTA — min 44×44px touch target */
 .donate-cta-box {
-  margin-bottom: 24px;
+  margin-bottom: clamp(16px, 3vw, 24px);
   width: 100%;
+  max-width: 400px;
   display: flex;
   justify-content: center;
+  padding: 0 4px;
 }
 
 .donate-cta-btn {
-  width: 275.100px;
-  height: 64px;
+  width: 100%;
+  min-width: min(100%, 275px);
+  min-height: 48px;
+  height: auto;
+  padding: 12px 28px;
   background-color: #a85f44;
   border: none;
   border-radius: 100px;
@@ -136,13 +166,15 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   gap: 12px;
   cursor: pointer;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.15);
   transition: background-color 0.2s ease, transform 0.1s ease;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .donate-cta-btn:hover {
@@ -160,84 +192,83 @@
   flex-shrink: 0;
 }
 
-/* Tax Status message */
+/* Tax status */
 .donate-tax-status {
   margin: 0;
   text-align: center;
+  padding: 0 8px;
 }
 
 .donate-tax-status span {
   font-family: 'General Sans', sans-serif;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: clamp(13px, 2vw, 14px);
+  line-height: 1.45;
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 1200px) {
-  .donate-section {
-    padding: 100px 40px;
+/* Tablet: 640px – 1024px — 3 equal columns when space allows */
+@media (min-width: 640px) {
+  .donate-heading span {
+    font-size: clamp(36px, 5.5vw, 52px);
+    letter-spacing: -1px;
   }
-  
+
   .donate-tiers-list {
-    flex-wrap: wrap;
-    justify-content: center;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .donate-tier-card {
+    min-height: 140px;
+  }
+
+  .donate-cta-btn {
+    width: auto;
+    min-width: 275px;
+    min-height: 56px;
+    padding: 14px 32px;
   }
 }
 
-@media (max-width: 768px) {
+/* Desktop: > 1024px — largest heading and section padding */
+@media (min-width: 1025px) {
   .donate-section {
-    padding: 32px 16px 60px 16px;
-  }
-  
-  .donate-container {
-    padding: 0;
+    padding: 128px var(--section-gutter-x, 32px) 100px;
   }
 
   .donate-heading span {
-    font-size: 26px;
-    line-height: 32px;
+    font-size: 60px;
+    line-height: 68px;
+    letter-spacing: -1.2px;
   }
 
   .donate-desc {
-    font-size: 16px;
-    line-height: 26px;
-  }
-  
-  .donate-description-box {
-    margin-bottom: 24px;
+    font-size: 20px;
+    line-height: 32.5px;
   }
 
   .donate-tiers-list {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
-    gap: 8px;
-    margin-bottom: 24px;
-  }
-  
-  .donate-tier-card {
-    width: 100%;
-    flex: 1;
-    max-width: none;
-    padding: 16px 8px;
-    height: auto;
-  }
-  
-  .donate-tier-amount {
-    font-size: 24px;
-    line-height: 28px;
-    margin-bottom: 8px;
+    gap: 24px;
+    max-width: 100%;
   }
 
-  .donate-tier-desc {
-    font-size: 11px;
-    line-height: 14px;
-  }
-  
-  .donate-cta-btn {
+  .donate-tier-card {
+    max-width: 304px;
     width: 100%;
-    max-width: 320px;
+    justify-self: center;
+  }
+
+  /* Center the 3 fixed-max cards as a group */
+  .donate-tiers-list {
+    grid-template-columns: repeat(3, minmax(0, 304px));
+    justify-content: center;
+  }
+
+  .donate-cta-btn {
+    width: 275.1px;
+    min-height: 64px;
+    height: 64px;
+    padding: 0 24px;
   }
 }
+

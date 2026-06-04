@@ -43,7 +43,7 @@ export default function StatsSection() {
           </p>
         </div>
 
-        {/* Stats Grid */}
+        {/* Stats Grid — responsive columns: 4 (desktop ≥1024px) | 2 (tablet 768–1023px) | 1 (mobile ≤767px) */}
         <div className="stats-grid" data-node-id="1:68">
           {stats.map((stat, idx) => (
             <div key={idx} className="stat-card" data-node-id={`card-${idx}`}>

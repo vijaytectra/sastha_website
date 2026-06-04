@@ -3,7 +3,7 @@
 .events-section {
   width: 100%;
   background-color: #f5f1ea;
-  padding: 100px 62.4px;
+  padding: 100px var(--section-gutter-x, 32px);
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -12,9 +12,9 @@
 
 .events-container {
   width: 100%;
-  max-width: 1280px;
+  max-width: var(--section-max-width, 1280px);
   box-sizing: border-box;
-  padding: 0 32px;
+  padding: 0;
   display: flex;
   flex-direction: column;
   gap: 80px; /* Space between header and list */
@@ -227,7 +227,7 @@
 
 @media (max-width: 768px) {
   .events-section {
-    padding: 32px 16px 16px 16px;
+    padding: 32px var(--section-gutter-x-mobile, 16px) 16px;
   }
   
   .events-container {

@@ -3,7 +3,7 @@
 .prog-section {
   width: 100%;
   background-color: #faf8f5;
-  padding: 100px 119.6px;
+  padding: 100px var(--section-gutter-x, 32px);
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -12,9 +12,9 @@
 
 .prog-container {
   width: 100%;
-  max-width: 1280px;
+  max-width: var(--section-max-width, 1280px);
   box-sizing: border-box;
-  padding: 0 32px;
+  padding: 0;
   display: flex;
   flex-direction: column;
   gap: 64px; /* Space between header and grid */
@@ -217,7 +217,7 @@
 /* Responsiveness Media Queries */
 @media (max-width: 1200px) {
   .prog-section {
-    padding: 100px 40px;
+    padding: 100px var(--section-gutter-x, 32px);
   }
   
   .prog-content-grid {
@@ -239,7 +239,7 @@
 
 @media (max-width: 768px) {
   .prog-section {
-    padding: 32px 16px;
+    padding: 32px var(--section-gutter-x-mobile, 16px);
   }
   
   .prog-container {

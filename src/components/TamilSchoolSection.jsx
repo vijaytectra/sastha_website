@@ -89,7 +89,8 @@ export default function TamilSchoolSection() {
             </div>
             
             <h3 className="school-banner-heading" data-node-id="1:229">
-              Enrollment Open for 2026-2027
+              Enrollment Open for{" "}
+              <span className="school-banner-years">2026-2027</span>
             </h3>
             
             <p className="school-banner-desc" data-node-id="1:231">

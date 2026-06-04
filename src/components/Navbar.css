@@ -15,7 +15,7 @@
   justify-content: center;
   align-items: center;
   /* Centering horizontal offsets */
-  padding: 0 119.6px;
+  padding: 0 var(--section-gutter-x, 32px);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
@@ -26,9 +26,9 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1280px;
+  max-width: var(--section-max-width, 1280px);
   height: 100%;
-  padding: 0 32px;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -43,12 +43,19 @@
   display: flex;
   align-items: center;
   text-decoration: none;
+  max-width: min(280px, 52vw);
+  min-width: 0;
+  flex-shrink: 1;
 }
 
+/* Wide wordmark — height-led scaling preserves aspect ratio */
 .navbar-logo-img {
-  height: 48px; /* Fixed height for the logo */
-  width: auto;
   display: block;
+  width: auto;
+  height: clamp(36px, 5.5vw, 48px);
+  max-width: 100%;
+  object-fit: contain;
+  object-position: left center;
 }
 
 /* Navigation Links Layout */
@@ -143,19 +150,13 @@
 }
 
 /* Responsiveness Media Query */
-@media (max-width: 992px) {
-  .navbar-header {
-    padding: 0 40px;
-  }
-}
-
 @media (max-width: 768px) {
   .navbar-header {
-    padding: 0 16px;
+    padding: 0 var(--section-gutter-x-mobile, 16px);
   }
   
   .navbar-container {
-    padding: 0 16px;
+    padding: 0;
   }
 
   .navbar-toggle {
@@ -163,10 +164,11 @@
   }
 
   .navbar-logo {
-    font-size: 22px;
-    line-height: 24px;
-    white-space: normal;
-    max-width: 240px;
+    max-width: min(200px, 58vw);
+  }
+
+  .navbar-logo-img {
+    height: clamp(32px, 9vw, 40px);
   }
 
   .navbar-nav {
@@ -203,5 +205,27 @@
     width: 100%;
     margin-top: 16px;
     height: 48px;
+  }
+}
+
+/* Small mobile: prevent header logo overflow (320px–480px) */
+@media (max-width: 480px) {
+  .navbar-logo {
+    max-width: min(180px, 62vw);
+  }
+
+  .navbar-logo-img {
+    height: 32px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar-logo {
+    max-width: min(260px, 40vw);
+  }
+
+  .navbar-logo-img {
+    height: 44px;
   }
 }

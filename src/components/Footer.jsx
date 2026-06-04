@@ -13,7 +13,14 @@ export default function Footer() {
           <div className="footer-col col-brand" data-node-id="1:608">
             <div className="footer-brand-header">
               <h3 className="footer-brand-title" data-node-id="1:609">
-                <img src="/image%203.svg" alt="Sastha Tamil Foundation Logo" className="footer-logo-img" />
+                <img
+                  src="/logo_footer.png"
+                  alt="Sastha Tamil Foundation Logo"
+                  className="footer-logo-img"
+                  width={120}
+                  height={120}
+                  decoding="async"
+                />
               </h3>
               <p className="footer-brand-desc" data-node-id="1:611">
                 Preserving Tamil language, culture, and community for future generations through education and cultural programs.
