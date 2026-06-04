@@ -227,7 +227,7 @@
 
 @media (max-width: 768px) {
   .events-section {
-    padding: 60px 16px;
+    padding: 32px 16px 16px 16px;
   }
   
   .events-container {

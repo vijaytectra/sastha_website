@@ -24,7 +24,8 @@
   align-items: center;
   width: 100%;
   text-align: center;
-  margin-bottom: 80px; /* Space between header and cards */
+  margin-bottom: 80px;
+  /* Space between header and cards */
 }
 
 .school-badge {
@@ -131,7 +132,8 @@
 }
 
 .school-card-desc {
-  margin: 0 0 auto 0; /* Pushes button to bottom */
+  margin: 0 0 auto 0;
+  /* Pushes button to bottom */
   font-family: 'Manrope', sans-serif;
   font-weight: 300;
   font-size: 16px;
@@ -311,12 +313,12 @@
     flex-direction: column;
     height: auto;
   }
-  
+
   .school-banner-content {
     width: 100%;
     padding: 48px;
   }
-  
+
   .school-banner-image-box {
     width: 100%;
     height: 400px;
@@ -325,16 +327,20 @@
 
 @media (max-width: 768px) {
   .school-section {
-    padding: 60px 16px;
+    padding: 32px 16px;
   }
-  
+
+  .school-header {
+    margin-bottom: 32px;
+  }
+
   .school-container {
     padding: 0;
   }
 
   .school-heading span {
-    font-size: 48px;
-    line-height: 52px;
+    font-size: 40px;
+    line-height: 46px;
   }
 
   .school-subtitle {
@@ -348,8 +354,9 @@
     margin-left: auto;
     margin-right: auto;
     gap: 24px;
+    margin-bottom: 32px;
   }
-  
+
   .school-card {
     height: auto;
     padding: 32px 24px;
@@ -371,5 +378,9 @@
   .school-banner-btn {
     width: 100%;
     font-size: 16px;
+  }
+
+  .school-banner-image-box {
+    display: none;
   }
 }

@@ -38,13 +38,22 @@
   box-sizing: border-box;
 }
 
+.footer-brand-header {
+  display: flex;
+  flex-direction: column;
+}
+
 .footer-brand-title {
-  font-family: 'DM Serif Text', 'Cormorant Garamond', serif;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 28px;
-  color: #ffffff;
-  margin: 0 0 32px 0;
+  display: flex;
+  align-items: center;
+  margin: 0 0 16px 0;
+  flex-shrink: 0;
+}
+
+.footer-logo-img {
+  height: 64px; /* Fixed height for the logo to make it prominent in the footer */
+  width: auto;
+  display: block;
 }
 
 .footer-brand-desc {
@@ -303,17 +312,45 @@
 
 @media (max-width: 768px) {
   .footer-root {
-    padding: 60px 16px 40px 16px;
+    padding: 32px 16px 40px 16px;
   }
   
   .footer-container {
     padding: 0;
-    gap: 48px;
+    gap: 32px;
   }
 
   .footer-cols {
-    grid-template-columns: 1fr;
-    gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 16px;
+  }
+
+  .col-brand, .col-contact {
+    grid-column: span 2;
+  }
+
+  .footer-brand-header {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .footer-logo-img {
+    height: 72px; /* Slightly larger on mobile for better balance */
+    margin-top: 4px; /* Slight push down to align optically with first line of text */
+  }
+
+  .footer-brand-title, .footer-brand-desc {
+    margin: 0;
+  }
+  
+  .footer-brand-desc {
+    font-size: 15px; /* Slightly smaller text on mobile to balance with logo */
+    line-height: 24px;
+  }
+
+  .footer-newsletter-row {
+    padding-top: 32px;
   }
 
   .footer-newsletter-form {
@@ -334,11 +371,13 @@
     align-items: center;
     gap: 24px;
     text-align: center;
+    padding-top: 32px;
   }
   
   .footer-legal-links {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 16px;
   }
 }

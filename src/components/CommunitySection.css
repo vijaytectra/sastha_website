@@ -264,7 +264,7 @@
 
 @media (max-width: 768px) {
   .comm-section {
-    padding: 60px 16px;
+    padding: 32px 16px;
   }
   
   .comm-container {
@@ -276,8 +276,8 @@
   }
 
   .comm-heading {
-    font-size: 40px;
-    line-height: 44px;
+    font-size: 34px;
+    line-height: 38px;
   }
 
   .comm-para {

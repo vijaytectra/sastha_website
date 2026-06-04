@@ -188,7 +188,7 @@
 
 @media (max-width: 768px) {
   .donate-section {
-    padding: 60px 16px;
+    padding: 32px 16px 60px 16px;
   }
   
   .donate-container {
@@ -196,24 +196,44 @@
   }
 
   .donate-heading span {
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 26px;
+    line-height: 32px;
   }
 
   .donate-desc {
     font-size: 16px;
     line-height: 26px;
   }
+  
+  .donate-description-box {
+    margin-bottom: 24px;
+  }
 
   .donate-tiers-list {
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 8px;
+    margin-bottom: 24px;
   }
   
   .donate-tier-card {
     width: 100%;
-    max-width: 320px;
+    flex: 1;
+    max-width: none;
+    padding: 16px 8px;
+    height: auto;
+  }
+  
+  .donate-tier-amount {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 8px;
+  }
+
+  .donate-tier-desc {
+    font-size: 11px;
+    line-height: 14px;
   }
   
   .donate-cta-btn {

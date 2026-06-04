@@ -58,7 +58,7 @@ export default function TamilSchoolSection() {
         <div className="school-cards-grid" data-node-id="1:168">
           {classes.map((item, idx) => (
             <div key={idx} className="school-card" data-node-id={`class-card-${idx}`}>
-              <div className="school-card-icon-box">
+              <div className="school-card-icon-box" style={idx === 1 ? { color: '#B8563F' } : {}}>
                 {item.icon}
               </div>
               <h3 className="school-card-title">{item.title}</h3>

@@ -11,12 +11,14 @@ export default function Footer() {
           
           {/* Column 1: Brand & Socials */}
           <div className="footer-col col-brand" data-node-id="1:608">
-            <h3 className="footer-brand-title" data-node-id="1:609">
-              Sastha Tamil Foundation
-            </h3>
-            <p className="footer-brand-desc" data-node-id="1:611">
-              Preserving Tamil language, culture, and community for future generations through education and cultural programs.
-            </p>
+            <div className="footer-brand-header">
+              <h3 className="footer-brand-title" data-node-id="1:609">
+                <img src="/image%203.svg" alt="Sastha Tamil Foundation Logo" className="footer-logo-img" />
+              </h3>
+              <p className="footer-brand-desc" data-node-id="1:611">
+                Preserving Tamil language, culture, and community for future generations through education and cultural programs.
+              </p>
+            </div>
             <div className="footer-social-links" data-node-id="1:612">
               <a href="#facebook" className="footer-social-link" data-node-id="1:613">
                 <svg className="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -118,7 +120,7 @@ export default function Footer() {
         {/* Row 3: Legal & Copyright */}
         <div className="footer-bottom-row" data-node-id="1:695">
           <p className="footer-copyright" data-node-id="1:697">
-            © 2026 Sangam Tamil Foundation. All rights reserved.
+            © 2026 Sastha Tamil Foundation. All rights reserved.
           </p>
           <div className="footer-legal-links" data-node-id="1:698">
             <a href="#privacy">Privacy Policy</a>

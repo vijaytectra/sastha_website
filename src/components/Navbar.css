@@ -36,18 +36,19 @@
 .navbar-brand {
   display: flex;
   align-items: center;
-  height: 40px;
+  height: 100%;
 }
 
 .navbar-logo {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 28px;
-  color: #2d5240;
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  white-space: nowrap;
-  letter-spacing: -0.5px;
+}
+
+.navbar-logo-img {
+  height: 48px; /* Fixed height for the logo */
+  width: auto;
+  display: block;
 }
 
 /* Navigation Links Layout */
@@ -161,6 +162,13 @@
     display: flex;
   }
 
+  .navbar-logo {
+    font-size: 22px;
+    line-height: 24px;
+    white-space: normal;
+    max-width: 240px;
+  }
+
   .navbar-nav {
     position: fixed;
     top: 0;
@@ -189,7 +197,6 @@
     font-size: 18px;
     width: 100%;
     padding: 8px 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   }
 
   .navbar-button {

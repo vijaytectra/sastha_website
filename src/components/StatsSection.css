@@ -143,7 +143,7 @@
 
 @media (max-width: 768px) {
   .stats-section {
-    padding: 60px 16px;
+    padding: 32px 16px 60px 16px;
   }
   
   .stats-container {
@@ -152,8 +152,8 @@
   }
 
   .stats-heading span {
-    font-size: 48px;
-    line-height: 52px;
+    font-size: 40px;
+    line-height: 46px;
   }
 
   .stats-subtitle {
